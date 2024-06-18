@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    background-image: url(images/laptopcover.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 10%;
+}
+.logo{
+   padding-left: -6px;
+   width: 140px;
+   cursor: pointer;
+}
+.container{
+    padding: 10px 8%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block; 
+    list-style: none;
+    margin: 10px 20px;   
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+nav ul li a:hover{
+    background-color: #2b2a2a;
+    transform: scale(2);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.header-text{
+    font-size: 20px;
+    padding-top: 20%;
+
+
+}
+.header-text h1 span{
+    color: aqua;
+}
+
+/*------------------------about---------------->*/
+#About{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.Aboutc1{
+    flex-basis: 35%;
+}
+.Aboutc1 img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.Aboutc2{
+    flex-basis: 60%;
+
+}
+
+.subtitle{
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+}
+.tabtitles{
+    display: flex;
+    margin: 20px 0px 40px;
+}
+.tablinks{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s;
+}
+.tablinks:hover{
+    background-color: rgb(185, 224, 224);
+    color: #fff;
+    transform: scale(1.2);
+    border-radius: 10px;
+    transition: 0.5s;  
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+.tab-contents ul li span{
+    color: aqua;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+   
+ display: block;
+}
+
+
+
+/*------------------------projects---------------->*/
+
+#Projects{
+    padding: 50px 0;
+}
+
+.worklist{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    padding: 10px 10px 10px;
+
+
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 350px;
+    height: 400px;;
+    border-radius: 15px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), aqua);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: aqua;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width:  fit-content;
+    border: 1px solid aqua;
+    padding: 15px 50px;
+    border-radius: 6px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: aqua;
+}
+
+
+
+
+/*------------------------contact---------------->*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+
+}
+
+.contact-left p i{
+    color: aqua;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+
+.social-icons a:hover{
+    color: aqua;
+    transform: scale(1.1);
+
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: aqua;
+}
+
+.contact-left form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 20px;
+    background: #262626;
+    font-weight: 300;
+    color: #ababab;
+}
+
+.copyright i{
+    color: aqua;
+}
+nav .fa{
+    display: none;
+}
+
+
+/*------------------------CSS for small screen---------------->*/
+
+
+@media only screen and (max-width: 600px){
+    .header-text{
+        margin-top: 100%;
+        font-size: 20px;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa{
+        display: block;
+        font-size: 20px;
+    }
+    nav ul{
+        background: aqua;
+        top: 0;
+        right: -200px;
+        padding-top: 30px;
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa{
+        position:absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+
+    }
+
+    .subtitle{
+        font-size: 40px;
+    }
+    .Aboutc1, .Aboutc2{
+        flex-basis: 100%;
+    }
+    .Aboutc1{
+        margin-bottom: 30px;
+    }
+
+    .Aboutc2{
+        font-size: 14px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
+
+#msg
+{
+    display: block;
+    margin-top: -40px;
+    color: rgb(107, 132, 124);
+}
+
